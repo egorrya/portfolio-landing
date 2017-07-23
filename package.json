@@ -1,5 +1,5 @@
 {
-  "name": "port",
+  "name": "portfolio",
   "version": "0.1.0",
   "description": "",
   "main": "gulpfile.js",
@@ -30,12 +30,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/faynco/port.git"
+    "url": "git+https://github.com/faynco/portfolio.git"
   },
   "author": "Egor Rya",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/faynco/port/issues"
+    "url": "https://github.com/faynco/portfolio/issues"
   },
-  "homepage": "https://github.com/faynco/port#readme"
+  "homepage": "https://github.com/faynco/portfolio#readme"
 }

@@ -8,10 +8,11 @@
 
 .about__me {
 	p {
-			padding: 10px 30px;
+		padding: 10px 30px;
 		margin-bottom: 50px;
 	}
 }
+
 .about__skills {
 	margin-top: 70px;
 
@@ -34,6 +35,11 @@
 	h3 {
 		margin-top: 0px;
 	}
+
+	.about__js  {
+		margin-top: 8px;
+		margin-bottom: 12px;
+	}
 }
 
 .fa-html5 {
@@ -41,21 +47,36 @@
 	margin-bottom: 20px;
 }
 
+
 @media @m-width-only {
+
 	.about {
 		padding-bottom: 0px;
 	}
+
 	.about__langs {
 		flex-wrap: wrap;
 	}
+
 	.about__item{
 		width: 100%;
 	}
 }
 @media @t-width {
+
 	.about__me {
 		p {
 			padding: 10px 150px;
+		}
+	}
+
+	.about__item{
+		margin-top: 10px;
+		margin-bottom: 10px;
+
+		.about__js  {
+			margin-top: -3px;
+			margin-bottom: 12px;
 		}
 	}
 }
