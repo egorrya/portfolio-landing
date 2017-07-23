@@ -8,6 +8,7 @@
   <title>Портфолио</title>
   <!-- Import main styles -->
   <link rel="stylesheet" href="assets/css/style.min.css">
+  <script type="text/javascript" src="assets/js/jquery-1.11.2.min.js"></script>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -17,14 +18,25 @@
   <!--[if lt IE 10]>
 <link rel="stylesheet" href="assets/css/ie.css">
 <![endif]-->
+
+
+
 </head>
 <body>
   <header class="page-header">
     <h1 class="visually-hidden">Сайт Портфолио Full Stack разработчика Рябыш Егора</h1>
-    <div class="page-header__logo">
-      <p class="page-header__brand">faynco.</p>
+    <div class="page-header__logo ">
+      <div class="page-header__content">
+        <div class="page-header__content__container">
+          <ul class="page-header__content__container__list">
+            <li class="page-header__content__container__list__item">faynco.</li>
+            <li class="page-header__content__container__list__item">egor.</li>
+          </ul>
+        </div>
+      </div>
+      <!-- <p class="page-header__brand ">faynco.</p> -->
     </div>
-    <nav class="main-nav" onclick="">
+    <nav class="main-nav">
       <input type="checkbox" id="hamburger"/>
       <label class="menuicon" for="hamburger">
         <span></span>
@@ -42,9 +54,9 @@
       </div>
     </nav>
   </header>
-  <section class="home-section">
-    <h1 class="home-section__title">Егор Рябыш</h1>
-    <h4 class="home-section__desc">Full Stack Developer</h4>
+  <section class="home-section ">
+    <h1 class="home-section__title ">Егор Рябыш</h1>
+    <h4 class="home-section__desc ">Full Stack Developer</h4>
     <a href="#" class="btn">Связаться</a>
   </section>
   <section class="about">
@@ -106,19 +118,30 @@
     <h3>Секунд на этом сайте!<br>Чего же вы ждёте?</h3>
   </section>
   <section class="contact">
-    
+    <h2>Связаться</h2>
+    <form class="contact__form" action="#" method="post">
+      <input class="contact__input" type="text" name="name" placeholder="Ваше имя">
+      <input class="contact__input" type="email" name="email" placeholder="E-mail"><br>
+      <textarea class="contact__textarea" name="comment" rows="5" placeholder="Сообщение"></textarea>
+      <input class="contact__btn btn" type="submit" name="send">
+    </form>
+  </section>
+  <section class="page-footer">
+    <div class="page-footer__container-fluid">
+      <div class="page-footer__network">
+        <a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+      </div>
+      <div class="page-footer__copy">2017</div>
+      <div class="page-footer__up">
+        <i class="fa fa-angle-double-up fa-2x" aria-hidden="true"></i>
+      </div>
+    </div>
   </section>
 
-
-
-  <!--Import jQuery-->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-
-  <!-- bootstrap Scripts -->
-  <!-- <script type="text/javascript" src="assets/js/bootstrap.min.js"></script> -->
-
-  <!-- Site Scripts -->
-  <!-- <script type="text/javascript" src="assets/js/functions.js"></script> -->
+  <script type="text/javascript" src="assets/js/jquery.waypoints.min.js"></script>
+  <script type="text/javascript" src="assets/js/common.js"></script>
 
 </body>
 </html>
