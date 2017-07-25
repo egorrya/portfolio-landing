@@ -597,12 +597,12 @@ img {
 }
 .waiting__counter::before {
   content: "0 \a 1 \a 2 \a 3 \a 4 \a 5 \a 6 \a 7 \a 8 \a 9";
-  left: 12px;
+  left: 13px;
   animation: count_tens 100s linear infinite;
 }
 .waiting__counter::after {
   content: "0 \a 1 \a 2 \a 3 \a 4 \a 5 \a 6 \a 7 \a 8 \a 9";
-  right: 12px;
+  right: 13px;
   animation: count_secs 10s linear infinite;
 }
 @keyframes count_tens {
