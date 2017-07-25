@@ -76,7 +76,6 @@
 		margin: 0 30vw 20px;
 		&__container {
 			padding: 0 40px 0 0;
-
 		}
 	}
 
@@ -96,7 +95,6 @@
 
 .main-nav__items {
 	font-weight: bold;
-
 }
 
 .main-nav__item a {
@@ -110,26 +108,11 @@
 	border-top: 1px solid #e1e1e1;
 	border-bottom: 1px solid #eee;
 
-
 	&:hover {
 		color: #000;
 		background-color: #ccc;
 		border-top: 1px solid #bbb;
 		border-bottom: 1px solid #bbb;
-	}
-
-	&:active {
-		color: #fff;
-		background-color: #ccc;
-		border-top: 1px solid #bbb;
-		border-bottom: 1px solid #bbb;
-	}
-}
-
-.main-nav__item a[href] {
-
-	&:active {
-		color: rgba(255, 255, 255, 0.8);
 	}
 }
 
@@ -156,11 +139,13 @@
 	width: 25px;
 }
 
-.menuicon span, .menuicon span::after, .menuicon span::before{
+.menuicon span,
+.menuicon span::after,
+.menuicon span::before {
 	display: block;
-	width: 26px;
-	height: 4px;
-	background-color: #000;
+	width: 30px;
+	height: 5px;
+	background-color: #222;
 }
 
 .menuicon span {
@@ -170,7 +155,8 @@
 	transition-delay: 0.2s;
 }
 
-.menuicon span::after, .menuicon span::before {
+.menuicon span::after,
+.menuicon span::before {
 
 	content: '';
 	position: absolute;
