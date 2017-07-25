@@ -1,11 +1,13 @@
 .page-header {
 	.container-fluid();
+
+	padding-top: 20px;
 }
 
 .page-header__content {
-	margin: 20px 0 0;
+	margin: 0;
 
-	width: 220px;
+	width: 200px;
 	position:relative;
 	overflow:hidden;
 
@@ -20,7 +22,7 @@
 	&__container {
 		overflow: hidden;
 		height: 40px;
-		padding: 0 20px;
+		padding: 0 40px 0 0;
 
 		&:before {
 			content: '[';
@@ -53,7 +55,7 @@
 
 		&__list {
 			margin-top: 0;
-			text-align: center;
+			text-align: right;
 			list-style: none;
 
 			animation-name: change;
@@ -69,10 +71,14 @@
 }
 
 @media @m-width-only {
+	.page-header__content {
+		width: 190px;
+		margin: 0 30vw 20px;
+		&__container {
+			padding: 0 40px 0 0;
 
-.page-header__content {
-	margin: 20px auto;
-}
+		}
+	}
 
 // NAVIGATION
 

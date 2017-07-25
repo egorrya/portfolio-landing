@@ -8,7 +8,6 @@
   <title>Портфолио</title>
   <!-- Import main styles -->
   <link rel="stylesheet" href="assets/css/style.min.css">
-  <script type="text/javascript" src="assets/js/jquery-1.11.2.min.js"></script>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -19,12 +18,10 @@
 <link rel="stylesheet" href="assets/css/ie.css">
 <![endif]-->
 
-
-
 </head>
 <body>
-  <header class="page-header">
-    <h1 class="visually-hidden">Сайт Портфолио Full Stack разработчика Рябыш Егора</h1>
+  <header class="page-header" id="top">
+  <h1 class="visually-hidden">Сайт Портфолио Full Stack разработчика Рябыш Егора</h1>
     <div class="page-header__logo ">
       <div class="page-header__content">
         <div class="page-header__content__container">
@@ -45,11 +42,11 @@
         <ul class="main-nav__items">
           <li class="main-nav__item main-nav__item--active"><a>Главная</a>
           </li>
-          <li class="main-nav__item"><a href="#">Обо мне</a></li>
-          <li class="main-nav__item"><a href="#">Сфера</a></li>
-          <li class="main-nav__item"><a href="#">Портфолио</a>
+          <li class="main-nav__item"><a href="#about">Обо мне</a></li>
+          <li class="main-nav__item"><a href="#service">Сфера</a></li>
+          <li class="main-nav__item"><a href="#portfolio">Портфолио</a>
           </li> 
-          <li class="main-nav__item"><a href="#">Контакты</a></li>
+          <li class="main-nav__item"><a href="#contact">Контакты</a></li>
         </ul>
       </div>
     </nav>
@@ -57,10 +54,10 @@
   <section class="home-section ">
     <h1 class="home-section__title ">Егор Рябыш</h1>
     <h4 class="home-section__desc ">Full Stack Developer</h4>
-    <a href="#" class="btn">Связаться</a>
+    <a href="#contact" class="btn">Связаться</a>
   </section>
   <section class="about">
-    <div class="about__me">
+    <div class="about__me" id="about">
       <h2>Обо мне</h2>
       <p>Привет! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium distinctio asperiores quasi enim dignissimos sed veritatis fuga labore, optio deleniti cum cumque molestiae voluptate sint ab, at dicta incidunt vero.</p>
       <a href="#" class="btn">Скачать резюме</a>
@@ -84,14 +81,14 @@
       </div>
     </div>
   </section>
-  <section class="service">
+  <section class="service" id="service">
     <div class="service__content">
       <h2>Сфера</h2>
       <div class="service__items">
         <div class="service__item">
           <i class="fa fa-desktop fa-3x" aria-hidden="true"></i>
           <h3>Front-end</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium distinctio asperiores quasi enim dignissimos sed veritatis fuga labore, optio deleniti cum cumque molestiae voluptate sint ab, at dicta incidunt vero.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nihil autem qui labore modi consequuntur molestiae reprehenderit alias aut commodi fuga, eveniet incidunt nobis nulla quidem minima, sunt delectus voluptatum.   </p>
         </div>
         <div class="service__item">
           <i class="fa fa-code fa-3x" aria-hidden="true"></i>
@@ -101,7 +98,7 @@
       </div>
     </div>
   </section>
-  <section class="portfolio">
+  <section class="portfolio" id="portfolio">
     <h2>Мои работы</h2>
     <div class="portfolio__items">
       <div class="portfolio__item"></div>
@@ -117,7 +114,7 @@
     <h3 class="waiting__10">10</h3>
     <h3>Секунд на этом сайте!<br>Чего же вы ждёте?</h3>
   </section>
-  <section class="contact">
+  <section class="contact" id="contact">
     <h2>Связаться</h2>
     <form class="contact__form" action="#" method="post">
       <input class="contact__input" type="text" name="name" placeholder="Ваше имя">
@@ -129,19 +126,29 @@
   <section class="page-footer">
     <div class="page-footer__container-fluid">
       <div class="page-footer__network">
-        <a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a>
+        <a href="https://vk.com/egorrya"><i class="fa fa-vk" aria-hidden="true"></i></a>
         <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a href="https://github.com/faynco"><i class="fa fa-github" aria-hidden="true"></i></a>
       </div>
       <div class="page-footer__copy">2017</div>
       <div class="page-footer__up">
-        <i class="fa fa-angle-double-up fa-2x" aria-hidden="true"></i>
+        <a href="#top"><i class="fa fa-angle-double-up fa-2x" aria-hidden="true"></i></a>
       </div>
     </div>
   </section>
 
-  <script type="text/javascript" src="assets/js/jquery.waypoints.min.js"></script>
-  <script type="text/javascript" src="assets/js/common.js"></script>
+  <span id="forUNCSS" class="animated
+  fadeInRight
+  flash
+  slideInRight
+  fadeInUp
+  slideInLeft"></span>
 
+  <script src="assets/libs/jquery-3.2.1.min.js"></script>
+  <script src="assets/libs/jquery.waypoints.min.js"></script>
+  <script src="assets/libs/animate-css.js"></script>
+  <script src="assets/libs/plugins-scroll.js"></script>
+
+  <script src="assets/js/common.js"></script>
 </body>
 </html>
