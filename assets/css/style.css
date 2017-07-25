@@ -957,6 +957,9 @@ img {
   .service__items{
     flex-wrap: wrap;
   }
+  .service__item{
+    width: 100%;
+  }
   .contact__form{
     padding: 0px 20px 0px;
   }
