@@ -8,5 +8,4 @@
 	$(".about__langs").animated("slideInLeft");
 	$(".service__content").animated("fadeInUp");
 	$(".portfolio__items").animated("slideInRight");
-  }
 });
