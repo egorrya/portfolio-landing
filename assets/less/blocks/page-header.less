@@ -1,11 +1,15 @@
 .page-header {
-	.container-fluid();
-
+	position: fixed;	
+	width: 100%;
+	z-index: 1;
 	padding-top: 20px;
+
+	border-bottom:1px solid rgba(22, 160, 133, 0.15);
+	
+	background-color: #FFF;
 }
 
 .page-header__content {
-	margin: 0;
 
 	width: 200px;
 	position:relative;
@@ -71,9 +75,13 @@
 }
 
 @media @m-width-only {
+	.page-header {
+		position: static ;	
+	}
+
 	.page-header__content {
 		width: 190px;
-		margin: 0 30vw 20px;
+		margin: 0 auto 20px;
 		&__container {
 			padding: 0 40px 0 0;
 		}
@@ -91,9 +99,6 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
-}
-
-.main-nav__items {
 	font-weight: bold;
 }
 
@@ -157,7 +162,6 @@
 
 .menuicon span::after,
 .menuicon span::before {
-
 	content: '';
 	position: absolute;
 
@@ -196,12 +200,10 @@
 }
 
 @media @t-width {
-	.page-header__brand {
-		margin-bottom: 0;
-		text-align: left;
-		position: relative;
-	}
 
+	.page-header__content {
+		margin: 0 5vw;
+	}
 	#hamburger {
 		display: none;
 	}
@@ -213,7 +215,7 @@
 	.main-nav__wrapper {
 		position:absolute;
 		top: 15px;
-		right: 6%;
+		right: 5%;
 
 		display: flex;
 		justify-content: space-around;
@@ -233,10 +235,10 @@
 		&:last-child {
 			margin-right: 0;
 		}
+	}
 
-		&--active {
-			border-bottom: 2px solid #333;
-		}
+	.active {
+		border-bottom: 2px solid #333;
 	}
 
 	.main-nav__item a {
@@ -244,9 +246,9 @@
 		padding: 0;
 		padding-top: 25px;
 		padding-bottom: 4px;
+		text-decoration: none;
 
 		color: #000;
-		text-decoration: none;
 	}
 
 	.main-nav__item a[href] {
@@ -262,9 +264,12 @@
 }
 
 @media @d-width {
+
+	.page-header__content {
+		margin: 0 15vw;
+	}
 	.main-nav__wrapper {
-		left: 50%;
-		right: 0;
+		right: 15%;
 	}
 }
 

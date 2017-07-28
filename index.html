@@ -20,18 +20,15 @@
 
 </head>
 <body >
-  <header class="page-header" id="top">
+<header class="page-header" >
     <h1 class="visually-hidden">Сайт Портфолио Full Stack разработчика Рябыш Егора</h1>
-    <div class="page-header__logo ">
-      <div class="page-header__content">
-        <div class="page-header__content__container">
-          <ul class="page-header__content__container__list">
-            <li class="page-header__content__container__list__item">faynco.</li>
-            <li class="page-header__content__container__list__item">egor.</li>
-          </ul>
-        </div>
+    <div class="page-header__content">
+      <div class="page-header__content__container">
+        <ul class="page-header__content__container__list">
+          <li class="page-header__content__container__list__item">faynco.</li>
+          <li class="page-header__content__container__list__item">egor.</li>
+        </ul>
       </div>
-      <!-- <p class="page-header__brand ">faynco.</p> -->
     </div>
     <nav class="main-nav">
       <input type="checkbox" id="hamburger"/>
@@ -40,7 +37,7 @@
       </label> 
       <div class="main-nav__wrapper">
         <ul class="main-nav__items">
-          <li class="main-nav__item main-nav__item--active"><a>Главная</a>
+          <li class="main-nav__item "><a href="#top" class="active">Главная</a>
           </li>
           <li class="main-nav__item"><a href="#about">Обо мне</a></li>
           <li class="main-nav__item"><a href="#service">Сфера</a></li>
@@ -51,15 +48,15 @@
       </div>
     </nav>
   </header>
-  <section class="home-section ">
+  <section class="home-section " id="top">
     <div class="home-section__container-fluid">
       <h1 class="home-section__title ">Егор Рябыш</h1>
       <h4 class="home-section__desc ">Full Stack Developer</h4>
       <a href="#contact" class="btn">Связаться</a>
     </div>
   </section>
-  <section class="about">
-    <div class="about__me" id="about">
+  <section class="about" id="about">
+    <div class="about__me">
       <h2>Обо мне</h2>
       <p>Привет! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium distinctio asperiores quasi enim dignissimos sed veritatis fuga labore, optio deleniti cum cumque molestiae voluptate sint ab, at dicta incidunt vero.</p>
       <a href="#" class="btn">Скачать резюме</a>
@@ -112,11 +109,11 @@
     </div>
     <a href="#" class="portfolio__btn btn">посмотреть ещё</a>
   </section>
-  <section class="waiting">
+  <section class="waiting" id="contact">
     <span class="waiting__counter"></span>
     <h3>Секунд на этом сайте!<br>Чего же вы ждёте?</h3>
   </section>
-  <section class="contact" id="contact">
+  <section class="contact" >
     <h2>Связаться</h2>
     <form class="contact__form" action="#" method="post">
       <input class="contact__input" type="text" name="name" placeholder="Ваше имя">
@@ -128,9 +125,17 @@
   <section class="page-footer">
     <div class="page-footer__container-fluid">
       <div class="page-footer__network">
-        <a href="https://vk.com/egorrya"><i class="fa fa-vk" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a href="https://github.com/faynco"><i class="fa fa-github" aria-hidden="true"></i></a>
+
+        <a href="https://www.linkedin.com/in/егор-рябыш-301375148/">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a href="https://vk.com/egorrya">
+          <i class="fa fa-vk" aria-hidden="true"></i>
+        </a>
+
+        <a href="https://telegram.me/egorrya">
+          <i class="fa fa-telegram" aria-hidden="true"></i>
+        </a>
       </div>
       <div class="page-footer__copy">2017</div>
       <div class="page-footer__up">
@@ -144,12 +149,13 @@
   flash
   slideInRight
   fadeInUp
-  slideInLeft"></span>
+  slideInLeft
+  active"></span>
 
   <script src="assets/libs/jquery-3.2.1.min.js"></script>
   <script src="assets/libs/jquery.waypoints.min.js"></script>
   <script src="assets/libs/animate-css.js"></script>
-  <script src="assets/libs/plugins-scroll.js"></script>
+  <!-- <script src="assets/libs/plugins-scroll.js"></script> -->
 
   <script src="assets/js/common.js"></script>
 </body>
