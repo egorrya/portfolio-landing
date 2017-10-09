@@ -28,7 +28,7 @@ $(document).ready(function(){
         $('body,html').animate({scrollTop: top}, 600);
       });
 
-		// animate css
+	// animate css
 
 	$(".main-nav__items").animated("fadeInRight");
 	$(".home-section__title").animated("flash");
@@ -36,4 +36,26 @@ $(document).ready(function(){
 	$(".about__langs").animated("slideInLeft");
 	$(".service__content").animated("fadeInUp");
 	$(".portfolio__items").animated("slideInRight");
+
+	// counter for 10000 sec
+
+	$('.waiting__counter').each(function() {
+		var $this = $(this),
+		countTo = $this.attr('data-count');
+
+		$({ countNum: $this.text()}).animate({
+			countNum: countTo
+		},
+
+		{
+			duration: 10000000,
+			easing:'linear',
+			step: function() {
+				$this.text(Math.floor(this.countNum));
+			},
+			complete: function() {
+				$this.text(this.countNum);
+			}
+		});
+	});
 });

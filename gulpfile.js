@@ -21,7 +21,7 @@ gulp.task("style", function() {
 	.pipe(plumber())
 	.pipe(less())
 	.pipe(uncss({
-		html: ['index.html', 'posts/**/*.html', 'http://example.com']
+		html: ['index.html', '*.html']
 	}))
 	.pipe(postcss([
 		autoprefixer({browsers: [
