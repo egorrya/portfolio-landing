@@ -582,6 +582,7 @@ img {
 }
 .waiting__counter {
   color: #fff;
+  letter-spacing: 0.1em;
   overflow: visible;
   font-size: 100px;
   line-height: 100px;
@@ -967,14 +968,7 @@ img {
   .contact__network a:nth-child(1){
     border-bottom: 1px solid #333;
   }
-  .page-footer__container-fluid div{
-    width: 50%;
-    padding: 40px 20px;
-  }
-  .page-footer__container-fluid .page-footer__up{
-    width: 30%;
-  }
-  .page-footer__copy{
-    display: none;
+  .page-footer__up .fa-angle-double-up{
+    margin-right: 20px;
   }
 }
