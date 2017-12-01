@@ -17,7 +17,7 @@
 	top: 25px;
 	right: 15px;
 
-	opacity:0.60;
+	opacity:0.50;
 
 	&:hover {
 		opacity: 0.8;
@@ -41,7 +41,7 @@
 
 	&__container {
 		overflow: hidden;
-		height: 40px;
+		height: 47.5px;
 		padding: 0 40px 0 0;
 
 		&:before {
@@ -103,123 +103,127 @@
 		}
 	}
 
-// NAVIGATION
+	// NAVIGATION
 
-.main-nav {
-	position: relative;
+	.main-nav {
+		position: relative;
 
-	width: auto;
-}
-
-.main-nav__items {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	font-weight: bold;
-}
-
-.main-nav__item a {
-	display: block;
-	padding: 16px 25px;
-
-	color: #000;
-	text-decoration: none;
-
-	background-color: #efefef;
-	border-top: 1px solid #e1e1e1;
-	border-bottom: 1px solid #eee;
-
-	&:hover {
-		color: #000;
-		background-color: #ccc;
-		border-top: 1px solid #bbb;
-		border-bottom: 1px solid #bbb;
+		width: auto;
 	}
-}
 
-/* HAMBURGER */
+	.main-nav__items {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-weight: bold;
+	}
 
-#hamburger {
-	display: none;
-}
+	.main-nav__item a {
+		display: block;
+		padding: 16px 25px;
 
-.main-nav__wrapper {
-	display: none;
+		color: #000;
+		text-decoration: none;
 
-	transition-duration: 0.2s;
-	transition-delay: 0.2s;
-}
+		background-color: #efefef;
+		border-top: 1px solid #e1e1e1;
+		border-bottom: 1px solid #eee;
 
-.menuicon {
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	display: block;
-	cursor: pointer;
-	height: 21px;
-	width: 25px;
-}
+		&:hover {
+			color: #000;
+			background-color: #ccc;
+			border-top: 1px solid #bbb;
+			border-bottom: 1px solid #bbb;
+		}
+	}
 
-.menuicon span,
-.menuicon span::after,
-.menuicon span::before {
-	display: block;
-	width: 30px;
-	height: 5px;
-	background-color: #222;
-}
+	/* HAMBURGER */
 
-.menuicon span {
-	top: -51px;
-	left: 10px;
-	position: relative;
-	transition-delay: 0.2s;
-}
+	#hamburger {
+		display: none;
+	}
 
-.menuicon span::after,
-.menuicon span::before {
-	content: '';
-	position: absolute;
+	.main-nav__wrapper {
+		display: none;
 
-	transition-duration: 0.2s;
-	transition-delay: 0.2s;
-}
+		transition-duration: 0.2s;
+		transition-delay: 0.2s;
+	}
 
-.menuicon span::before {
-	margin-top: -8px;
-}
+	.menuicon {
+		position: absolute;
+		top: 5px;
+		left: 10px;
+		display: block;
+		cursor: pointer;
+		height: 21px;
+		width: 25px;
+	}
 
-.menuicon span::after {
-	margin-top: 8px;
-}
+	.menuicon span,
+	.menuicon span::after,
+	.menuicon span::before {
+		display: block;
+		width: 30px;
+		height: 5px;
+		background-color: #222;
+	}
 
-#hamburger:checked ~ .main-nav__wrapper {
-	display: block;
+	.menuicon span {
+		top: -51px;
+		left: 10px;
+		position: relative;
+		transition-delay: 0.2s;
+	}
 
-}
+	.menuicon span::after,
+	.menuicon span::before {
+		content: '';
+		position: absolute;
 
-#hamburger:checked ~ .menuicon span {
-	background-color: transparent;
-}
+		transition-duration: 0.2s;
+		transition-delay: 0.2s;
+	}
 
-#hamburger:checked ~ .menuicon span::before, #hamburger:checked ~ .menuicon span::after {
-	margin-top: 0px;
-}
+	.menuicon span::before {
+		margin-top: -8px;
+	}
 
-#hamburger:checked ~ .menuicon span::before {
-	transform: rotate(45deg);
-}
+	.menuicon span::after {
+		margin-top: 8px;
+	}
 
-#hamburger:checked ~ .menuicon span::after {
-	transform: rotate(-45deg);
-}
+	#hamburger:checked ~ .main-nav__wrapper {
+		display: block;
+
+	}
+
+	#hamburger:checked ~ .menuicon span {
+		background-color: transparent;
+	}
+
+	#hamburger:checked ~ .menuicon span::before, #hamburger:checked ~ .menuicon span::after {
+		margin-top: 0px;
+	}
+
+	#hamburger:checked ~ .menuicon span::before {
+		transform: rotate(45deg);
+	}
+
+	#hamburger:checked ~ .menuicon span::after {
+		transform: rotate(-45deg);
+	}
 }
 
 @media @t-width {
+	.page-header__language {
+		top: 27.5px;
+	}
 
 	.page-header__content {
-		margin: 0 5vw;
+		margin: 0 5vw 0;
 	}
+
 	#hamburger {
 		display: none;
 	}
@@ -230,12 +234,13 @@
 
 	.main-nav__wrapper {
 		position:absolute;
-		top: 15px;
+		top: 17.5px;
 		right: 8%;
 
 		display: flex;
 		justify-content: space-around;
 	}
+
 	.main-nav__items {
 
 		color: #fff;
