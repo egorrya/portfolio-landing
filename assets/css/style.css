@@ -165,6 +165,7 @@ img {
  * 2. Remove the margin in Firefox and Safari.
  */
 
+button,
 input {
   font-family: sans-serif; /* 1 */
   font-size: 100%; /* 1 */
@@ -177,6 +178,7 @@ input {
  * 1. Show the overflow in Edge.
  */
 
+button,
 input { /* 1 */
   overflow: visible;
 }
@@ -186,19 +188,36 @@ input { /* 1 */
  * 1. Remove the inheritance of text transform in Firefox.
  */
 
+button { /* 1 */
+  text-transform: none;
+}
+
 /**
  * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
  *    controls in Android 4.
  * 2. Correct the inability to style clickable types in iOS and Safari.
  */
 
+button {
+  -webkit-appearance: button; /* 2 */
+}
+
 /**
  * Remove the inner border and padding in Firefox.
  */
 
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
 /**
  * Restore the focus styles unset by the previous rule.
  */
+
+button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
 
 /**
  * Correct the padding in Firefox.
@@ -307,6 +326,12 @@ input { /* 1 */
 /* Deprecated as of 4.4.0 */
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
+.fa-chevron-left:before {
+  content: "\f053";
+}
+.fa-chevron-right:before {
+  content: "\f054";
+}
 .fa-github:before {
   content: "\f09b";
 }
@@ -711,40 +736,59 @@ img {
   text-align: center;
   width: auto;
 }
-.portfolio__items {
+.slide {
+  display: none;
+}
+.showing {
   display: flex;
   flex-direction: row;
   padding-bottom: 15px;
   justify-content: center;
   flex-wrap: wrap;
+  transition: all 0.3s ease;
 }
 .portfolio__item {
-  display: block;
+  display: inline-block;
   overflow: hidden;
   width: 100%;
   height: 190px;
-  margin-right: 40px;
+  margin-right: 35px;
   margin-bottom: 30px;
-  margin-left: 40px;
+  margin-left: 0;
+  text-decoration: none;
   border: none;
   outline: none;
   background: #111;
-  text-decoration: none;
-}
-.portfolio__item:nth-child(n+4) {
-  display: none;
 }
 .portfolio__item p {
   font-family: 'Montserrat', sans-serif;
   margin-top: 82.5px;
-  text-transform: uppercase;
   text-align: center;
   letter-spacing: 1px;
+  text-transform: uppercase;
   color: #eee;
   text-shadow: -0.01px 0 1px #1ef2f1, 0.01px 0 1px #f6050a;
 }
 .portfolio__item p span {
   font-size: 22px;
+}
+.portfolio__controls {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  height: 50px;
+  margin-bottom: 60px;
+  cursor: pointer;
+  border: 1px solid #eee;
+  outline: none;
+  background-color: #fff;
+}
+.portfolio__controls:hover,
+.portfolio__controls:active {
+  background-color: #eee;
+}
+.portfolio__controls__left {
+  border-right: 0  solid #eee;
 }
 .waiting {
   padding: 20px 15px 0;
@@ -948,13 +992,13 @@ img {
     max-width: 960px;
     margin: 0 auto;
   }
+  .portfolio {
+    position: relative;
+  }
   .portfolio__item {
     width: 190px;
-    margin-right: 30px;
+    margin-right: 20px;
     margin-left: 0;
-  }
-  .portfolio__item:nth-child(4n) {
-    margin-right: 0;
   }
   .portfolio__item,
   .portfolio__item span {
@@ -963,6 +1007,31 @@ img {
   .portfolio__item:hover,
   .portfolio__item span:hover {
     border-radius: 50%;
+  }
+  .portfolio__controls {
+    position: absolute;
+    top: 175px;
+    width: 60px;
+    height: 60px;
+    border: 0 solid #eee;
+    background-color: rgba(254, 254, 254, 0);
+  }
+  .portfolio__controls .fa {
+    font-size: 40px;
+  }
+  .portfolio__controls:hover,
+  .portfolio__controls:active {
+    background-color: rgba(254, 254, 254, 0);
+  }
+  .portfolio__controls:hover .fa,
+  .portfolio__controls:active .fa {
+    font-size: 50px;
+  }
+  .portfolio__controls__left {
+    left: -20px;
+  }
+  .portfolio__controls__right {
+    right: -20px;
   }
   @keyframes portfolio__item {
     0% {
@@ -1039,11 +1108,14 @@ img {
     background: #fff url(../img/scaled-at-200/img@2x.jpg) no-repeat top center;
     background-size: 100%;
   }
-  .portfolio__item:nth-child(4n) {
-    margin-right: 0;
+  .portfolio__item {
+    margin-right: 40px;
   }
-  .portfolio__item:nth-child(n+4) {
-    display: block;
+  .portfolio__controls__left {
+    left: 0;
+  }
+  .portfolio__controls__right {
+    right: 0;
   }
 }
 @media (max-width: 767px) {
