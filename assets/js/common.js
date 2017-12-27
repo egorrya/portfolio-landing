@@ -35,7 +35,6 @@ $(document).ready(function(){
 	$(".home-section__desc").animated("flash");
 	$(".about__langs").animated("slideInLeft");
 	$(".service__content").animated("fadeInUp");
-	$(".portfolio__items").animated("slideInRight");
 
 	// counter for 10000 sec
 

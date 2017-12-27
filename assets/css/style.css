@@ -754,7 +754,15 @@ img {
   padding-bottom: 15px;
   justify-content: center;
   flex-wrap: wrap;
-  transition: all 0.3s ease;
+  animation: portfolio-items 0.8s ease-in 1;
+}
+@keyframes portfolio-items {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .portfolio__item {
   display: inline-block;
