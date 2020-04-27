@@ -1,4 +1,3 @@
-# Мой сайт портфолио
-Одностраничный портфолио-сайт с оригинальным дизайном
+# My old portfolio
 
-### [Перейти](https://faynco.github.io/portfolio/)
+### [Go to](https://egorrya.github.io/portfolio/)
